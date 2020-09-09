@@ -22,6 +22,5 @@ def searchInsert(nums, target) :
     return left
 
 
-nums = [1,3,5,6]
-target = 1
-print(searchInsert(nums,target))
+
+    
