@@ -17,5 +17,11 @@ def twoSum(nums,target):
         j = hashmap.get(target - num)
         if j is not None and i!=j:
             return [i,j]
+"""
+nums = [2, 7, 11, 15] -> 
+enumerate(nums) = [(0, 2), (1, 7), (2, 11), (3, 15)] -> 
+hashmap = {2: 0, 7: 1, 11: 2, 15: 3}
+通过hashmap.get(target - num)就能得到另一个加数的索引(数组下标)
+"""
 
 # print(twoSum(nums,target))
