@@ -1,9 +1,5 @@
 class Solution(object):
     def generate(self, numRows):
-        """
-        :type numRows: int
-        :rtype: List[List[int]]
-        """
         if numRows ==0:return []
         res = [[1]]
         while len(res) < numRows:
