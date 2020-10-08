@@ -3,7 +3,7 @@ class Solution:
         lens = len(nums)
         j = -1
         for i in range(1,lens):
-            temp = nums[:i]
+            temp = nums[:i] # 这里可以限定i != j
             if target - nums[i] in temp:
                 j = temp.index(target - nums[i])
                 break
