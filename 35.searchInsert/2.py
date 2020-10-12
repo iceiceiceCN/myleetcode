@@ -29,5 +29,3 @@ class Solution:
     划分[left, mid]与[mid + 1, right],mid 被分到左边,对应 int mid = left + (right - left) / 2
     划分[left, mid - 1]与[mid, right],mid 被分到右边,对应 int mid = left + (right - left + 1) /2
 """
-
-    
