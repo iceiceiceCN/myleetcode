@@ -7,3 +7,5 @@ class Solution:
                 i += 1
                 nums[i] = nums[j]
         return i + 1
+
+# 双指针直接覆盖的方法
