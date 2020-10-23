@@ -10,13 +10,15 @@ class Solution(object):
         res = c.most_common(1)[0][0]
 
         return res
+        # return c
 
-# nums = [3,2,3]
+# nums = [3,2,3,1,2,2,2]
 
 # if __name__ == "__main__":
 #     A = Solution()
 #     B = A.majorityElement(nums)
 #     print(B.most_common(1)[0][0])
+#     print(B.most_common(1)) # [(2, 4)] 输出为key 和 frequency
 
 
 
