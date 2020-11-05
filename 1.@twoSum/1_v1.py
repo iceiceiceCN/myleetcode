@@ -3,13 +3,20 @@ class Solution:
         lens = len(nums)
         j = -1
         for i in range(0,lens):
-            if target - nums[i] in nums:
+            if target - nums[i] in nums: # 先判断是否有该值，如果存在该值则返回索引
                 j = nums.index(target - nums[i])
             else:continue
-            if j >=0 and j != i:
+            if j >=0 and j != i: # 该值存在且不为自身
                 return [j,i]
 
 if __name__ == "__main__":
     A = Solution()
     B = A.twoSum(nums=[2,5,5,11],target=10)
     print(B)
+
+"""
+先判断是否有该值，然后再返回索引值，最后判断是否合法再返回
+
+执行用时：452 ms, 在所有 Python 提交中击败了56.18%的用户
+内存消耗：13.8 MB, 在所有 Python 提交中击败了21.72%的用户
+"""
