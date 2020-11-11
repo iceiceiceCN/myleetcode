@@ -11,7 +11,7 @@ class Solution(object):
             s= '' # 每次加完需要重新清空字符串s
             for i in word:
                 s += morse[ord(i)-ord('a')]
-            res.add(s)
+            res.add(s) # set()不能用append 要用add
         
         return len(res)
         
