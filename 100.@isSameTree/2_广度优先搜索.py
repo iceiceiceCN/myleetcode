@@ -42,6 +42,16 @@ class Solution(object):
             if (not right1 and right2) or (not right2 and right1):
                 return False
             """
+            """
+            if not left1 and not left2:
+                pass
+            elif not left1 or not left2:
+                return False
+            if not right1 and not right2:
+                pass
+            elif not right1 or not right2:
+                return False
+            """
             
             if left1:
                 queue1.append(left1)
