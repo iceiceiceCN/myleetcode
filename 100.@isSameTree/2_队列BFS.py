@@ -32,7 +32,7 @@ class Solution(object):
             left1, right1 = node1.left, node1.right
             left2, right2 = node2.left, node2.right
 
-            if (not left1) ^ (not left2):  # 只能一个为空
+            if (not left1) ^ (not left2):  # 只能一个为空（相异为真）
                 return False
             if (not right1) ^ (not right2):
                 return False

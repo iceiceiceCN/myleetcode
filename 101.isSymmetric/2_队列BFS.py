@@ -35,7 +35,7 @@ class Solution(object):
             queue.append(left.left)
             queue.append(right.right)
 
-            # 将左节点的右孩子，右节点的左孩子放入队列
+            # 将左节点的右孩子，右节点的左孩子放入队列 # 其实谁前谁后没区别
             queue.append(left.right)
             queue.append(right.left)
         
