@@ -21,6 +21,7 @@ class Solution(object):
         return max(self.depth(root.left),self.depth(root.right)) + 1
 
 """
+从顶至底：
 思路是构造一个获取当前节点最大深度的方法 depth(root)，
 通过比较此子树的左右子树的最大高度差abs(depth(root.left) - depth(root.right))，来判断此子树是否是二叉平衡树。
 若树的所有子树都平衡时，此树才平衡。
