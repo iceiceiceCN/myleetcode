@@ -29,3 +29,4 @@ class Solution(object):
         return mindiff
 
 # nonlocal的用法就是使得子函数能调用外部函数的变量
+# 中序遍历得到的一个有序数列，能够逐个对比差值
