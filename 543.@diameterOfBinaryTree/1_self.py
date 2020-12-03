@@ -24,9 +24,9 @@ class Solution(object):
         l = self.depth(root.left)
         r = self.depth(root.right)
 
-        self.max = max(r+l, self.max)
+        self.max = max(r+l, self.max) # 拿当前节点的节点直径(左深度+右深度)去迭代比较最大直径
 
-        return max(l, r) + 1
+        return max(l, r) + 1 # 返回该节点的最大深度
 
 """
 二叉树的直径：二叉树中从一个结点到另一个节点最长的路径，叫做二叉树的直径
