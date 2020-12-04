@@ -6,17 +6,18 @@ class Node:
         self.children = children
 """
 
-
 class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
+    def postorder(self, root: 'Node') -> List[int]:
         res = []
 
         def helper(root):
             if not root:
                 return []
-            res.append(root.val)
+            
             for node in root.children:
                 helper(node)
-
+                
+            res.append(root.val)
+        
         helper(root)
         return res
