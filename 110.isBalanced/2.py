@@ -16,9 +16,10 @@ class Solution(object):
         if not root:
             return 0
         
-        left = self.recur(root.left)
+        left = self.recur(root.left) # 得到左子树深度
         if left == -1:return -1
-        right = self.recur(root.right)
+
+        right = self.recur(root.right) # 得到右子树深度
         if right == -1:return -1
 
         return max(left,right) + 1 if abs(left-right) <2 else -1
