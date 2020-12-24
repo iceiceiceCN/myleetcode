@@ -14,14 +14,14 @@ class Solution(object):
         if not nums:
             return []
         
-        mid = len(nums)//2
-        node = TreeNode(nums[mid])
+        mid = len(nums)//2 # 因为mid的值是适中的，作为父节点或者根节点很合适
+        node = TreeNode(nums[mid]) # 将中间的值设为树的节点
 
         left = nums[:mid]
         right = nums[mid+1:]
 
-        node.left = self.sortedArrayToBST(left)
-        node.right = self.sortedArrayToBST(right)
+        node.left = self.sortedArrayToBST(left) # 左节点
+        node.right = self.sortedArrayToBST(right) # 右节点
         
         return node
 
@@ -30,8 +30,8 @@ class Solution(object):
 
 二叉搜索树（Binary Search Tree）是指一棵空树或具有如下性质的二叉树：
 
-1.若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值
-2.若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值
+1.若任意节点的 *左子树* 不空，则左子树上所有节点的值均 *小于* 它的根节点的值
+2.若任意节点的 *右子树* 不空，则右子树上所有节点的值均 *大于* 它的根节点的值
 3.任意节点的左、右子树也分别为二叉搜索树
 4.没有键值相等的节点
 
