@@ -11,10 +11,12 @@ class Solution(object):
             for _ in xrange(size):
                 node = queue.pop(0)
                 tmp.append(node.val)
+                
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
+
             # 每次插入到第一位，这样自带了翻转的功能       
             res.appendleft(tmp)
         return list(res)

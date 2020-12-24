@@ -17,14 +17,16 @@ class Solution(object):
         res = []
         while queue:
             tmp = []
-            size = len(queue)
+            size = len(queue) # 得到当前层的所有节点个数
             for _ in range(size):
                 node = queue.pop(0)
-                tmp.append(node.val)
+                tmp.append(node.val) # 当前层的所有节点
+                
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
+                    
             res.append(tmp)
         return res[::-1]
 """

@@ -12,7 +12,7 @@ class Solution(object):
         :type root: TreeNode
         :rtype: bool
         """
-        if not root or (not root.left and not root.right):
+        if not root or (not root.left and not root.right): # 没有根节点或者只有一个根节点，没有任何子树
             return True
 
         # 用队列保存节点
@@ -39,5 +39,5 @@ class Solution(object):
             queue.append(left.right)
             queue.append(right.left)
         
-        return not queue
+        return not queue # 如果队列遍历完毕都为true 则为ture
         # return True

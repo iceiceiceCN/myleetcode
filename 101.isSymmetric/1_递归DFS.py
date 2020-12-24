@@ -25,7 +25,7 @@ class Solution(object):
                 return False
             if left.val != right.val:
                 return False
-            return dfs(left.left, right.right) and dfs(left.right, right.left)
+            return dfs(left.left, right.right) and dfs(left.right, right.left) # 比较的是左节点的左子树和右节点的右子树
         # 用递归函数，比较左节点，右节点
         return dfs(root.left, root.right)
 
@@ -42,4 +42,10 @@ class Solution(object):
 
 算法的时间复杂度是 O(n)，因为要遍历 n 个节点
 空间复杂度是 O(n)，空间复杂度是递归的深度，也就是跟树高度有关，最坏情况下树变成一个链表结构，高度是n。
+
+        1
+    2       2
+3               3
+先比较的是2,2，两边同时都存在且值相同，且左节点有左子树、右节点有右子树。左节点的右子树和右节点的左子树都为空；
+再比较3,3，两边同时都存在且值相同，且都无子树，返回true
 """
