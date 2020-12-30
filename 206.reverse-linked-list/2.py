@@ -8,7 +8,7 @@ class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
 
         # 递归终止条件是当前为空，或者下一个节点为空
-        # head.next为空是多层嵌套函数到最后一个节点的跳出条件
+        # head.next /为空是多层嵌套函数到最后一个节点的跳出条件
         # head为空是为了防止输入为[]
         if head == None or head.next == None:
             return head
@@ -21,7 +21,7 @@ class Solution:
 		# 所以head.next.next 就是5->4
         head.next.next = head
 
-        # 防止链表循环，需要将head.next设置为空
+        # 防止链表循环，需要将head.next / 设置为空
         head.next = None
 
         # 每层递归函数都返回cur，也就是最后一个节点
