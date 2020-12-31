@@ -9,6 +9,7 @@ class Solution:
         pre = None
         cur = head
         while cur:
+            # 【重点】反转链表模板
             tmp = cur.next # 先把当前节点的下一节点存起来，防止过会找不到了
             cur.next = pre # 把当前节点的指针指向前面一个节点，开始反转
             pre = cur # 该节点反转完毕，开始将指针往后推移，把上一节点移到当前节点
