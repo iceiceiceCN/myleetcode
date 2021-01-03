@@ -1,3 +1,5 @@
+import sys
+sys.path.append("F:\myleetcode\LocalTest")
 from ListNodeTest import *
 
 class Solution:
