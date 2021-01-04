@@ -8,7 +8,7 @@ class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         pre = None
         cur = head
-        while cur:
+        while cur: # 一直迭代到cur为空时，跳出
             # 【重点】反转链表模板
             tmp = cur.next # 先把当前节点的下一节点存起来，防止过会找不到了
             cur.next = pre # 把当前节点的指针指向前面一个节点，开始反转
