@@ -57,5 +57,5 @@ class Solution:
 如果链表长度是偶数，前半部分和后半部分长度是一样的
 如果链表长度是奇数，前半部分的长度比后半部分长度多1个
 所以最后迭代链表的时候，以后半部分为准(以b为准)就可以了，当链表总长为奇数时，前半部分的最后一个节点就不会被遍历到了。
-
+https://leetcode-cn.com/problems/palindrome-linked-list/solution/dong-hua-yan-shi-234-hui-wen-lian-biao-by-user7439/
 """
