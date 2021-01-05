@@ -13,7 +13,7 @@ class Solution:
         second = dummy.next
 
         while second:  # 要判断最先到边界的节点
-            if second.val == val:
+            if second.val == val: # 判断得到val时 不要急着下一步 要再判断一次新节点的值
                 first.next = second.next
             else:
                 first = first.next
@@ -21,3 +21,7 @@ class Solution:
             second = second.next # 如果判断相同的话，只让second先走，因为有可能下一个还是val
 
         return dummy.next
+
+"""
+双指针 + dummy
+"""
