@@ -7,8 +7,8 @@ class Solution:
             if target - nums[i] in temp:
                 j = temp.index(target - nums[i])
                 break
-        if j >=0 :
-            return [j,i]
+
+        return [j,i]
 
 if __name__ == "__main__":
     A = Solution()

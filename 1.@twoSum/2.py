@@ -5,9 +5,9 @@ class Solution:
         for i in range(0,lens):
             if target - nums[i] in nums: # 先判断是否有该值，如果存在该值则返回索引
                 j = nums.index(target - nums[i])
-            else:continue
+            else:continue # 如果没找到就赶紧进行下一轮，不能继续往下执行，否则会输出错误答案
             if j >=0 and j != i: # 该值存在且不为自身
-                return [j,i]
+                return [i,j] # 可以按任意顺序返回答案
 
 if __name__ == "__main__":
     A = Solution()
