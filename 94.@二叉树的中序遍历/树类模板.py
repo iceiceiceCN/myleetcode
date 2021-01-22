@@ -59,7 +59,7 @@ class Solution:
             return []        
         res = []
         stack = [root]
-        # # 前序迭代模板：最常用的二叉树DFS迭代遍历模板
+        # # 前序迭代模板：最常用的二叉树DFS迭代遍历模板 【中-右-左】
         while stack:
             cur = stack.pop()
             res.append(cur.val)
@@ -69,7 +69,7 @@ class Solution:
                 stack.append(cur.left)
         return res
         
-        # # 后序迭代，相同模板：将前序迭代进栈顺序稍作修改，最后得到的结果反转
+        # # 后序迭代，相同模板：将前序迭代进栈顺序稍作修改，最后得到的结果反转 【左-右-中-反转】
         # while stack:
         #     cur = stack.pop()
         #     if cur.left:
@@ -93,6 +93,22 @@ class Solution:
                 if node.right: lay.append(node.right)
             cur = lay
             res.append(layval)
+        return res
+
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        if not root:
+            return []
+        queue,res = [root], []
+        while queue:
+            tmp = []
+            n = len(queue)
+            for _ in range(n):
+                node = queue.pop(0)
+                if node.left:queue.append(node.left)
+                if node.right:queue.append(node.right)
+                tmp.append(node.val)
+            res.append(tmp)
         return res
 
         
