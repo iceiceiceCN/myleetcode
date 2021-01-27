@@ -33,3 +33,7 @@ class Solution:
             headB = headB.next
         
         return headA
+
+"""
+计算两个链表的长度差n，然后让长的链表先走n步，再让两个链表一起走，直到交汇。
+"""
