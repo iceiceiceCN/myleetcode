@@ -4,15 +4,17 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        dict = {'(':')','{':'}','[':']','?':'?'}
+        dict = {'(': ')', '{': '}', '[': ']', '?': '?'}
         stack = ['?']
-        
+
         for c in s:
-            if c in dict:stack.append(c)
+            if c in dict:
+                stack.append(c)
             else:
                 if c != dict[stack.pop()]:
                     return False
-        return len(stack)==1
+        return len(stack) == 1
+
 
 """
 流程：
