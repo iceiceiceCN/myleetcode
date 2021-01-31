@@ -12,13 +12,32 @@ class Solution(object):
         """
         if not root:
             return True
-        return (abs(self.depth(root.left)-self.depth(root.right)) <=1 and 
-        self.isBalanced(root.left) and self.isBalanced(root.right))
+        return (abs(self.depth(root.left)-self.depth(root.right)) <= 1 and
+                self.isBalanced(root.left) and self.isBalanced(root.right))
 
-    def depth(self,root):
+    def depth(self, root):
         if not root:
             return 0
-        return max(self.depth(root.left),self.depth(root.right)) + 1
+        return max(self.depth(root.left), self.depth(root.right)) + 1
+
+
+class Solution(object):
+    def isBalanced(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if not root:
+            return True
+
+        def depth(root): # 得到二叉树深度模板
+            if not root:
+                return 0
+
+            return max(depth(root.left), depth(root.right))+1
+
+        return abs(depth(root.left) - depth(root.right)) < 2 and self.isBalanced(root.left) and self.isBalanced(root.right)
+
 
 """
 从顶至底：
