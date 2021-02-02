@@ -10,7 +10,7 @@ class Solution:
         colE = len(matrix[0]) - 1
 
         while colS <= colE and rowS <= rowE:
-            # if rowS <= rowE: # 右 右和下是顺着大小走的，不用判断
+            # if rowS <= rowE: # 右
             for i in range(colS,colE + 1):
                 res.append(matrix[rowS][i])
             rowS += 1
@@ -31,7 +31,6 @@ class Solution:
                 for i in range(rowE,rowS -1 ,-1):
                     res.append(matrix[i][colS])
                 colS += 1
-            # 此时
 
         return res
 
