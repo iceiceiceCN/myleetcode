@@ -19,3 +19,8 @@ class Solution:
 
         res = (res_left + res_right) - max_left * n - sum(height)
         return res
+
+# https://leetcode-cn.com/problems/trapping-rain-water/solution/wei-en-tu-jie-fa-zui-jian-dan-yi-dong-10xing-jie-j/
+"""
+积水面积 = S1 + S2 - 矩形面积 - 柱子面积
+"""
