@@ -15,7 +15,9 @@ class Solution:
 
         fast, low = dummy, dummy
 
-        while fast and fast.next:
+        # 如果没有fast.next，那么下一行中的fast.next.next就会报错，所以必须判断fast.next
+        # 但是不用判断fast.next.next，因为如果有fast.next，那么就算fast.next.next为空也不影响
+        while fast and fast.next: # 不用在乎fast.next.next，为空也可以跳过去
             low = low.next
             fast = fast.next.next
 
@@ -33,7 +35,7 @@ class Solution:
         a = dummy.next
         b = pre
 
-        while b:
+        while b: # 后面半段的链表可能会少一个节点，所以以后面的节点为准
             if b.val == a.val:
                 a = a.next
                 b = b.next
