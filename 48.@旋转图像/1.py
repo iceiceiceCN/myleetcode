@@ -19,3 +19,30 @@ class Solution:
         for i in range(len(matrix)):
             for j in range(i,len(matrix)):
                 matrix[i][j],matrix[j][i] = matrix[j][i],matrix[i][j]
+
+
+"""
+本题是「旋转二维数组」，如果是「旋转一维数组」呢？
+给定一个长度为 n 的一维数组，将前 k 个数移动到末尾。要求 原地 操作，该如何实现?
+
+输入: 1, 2, 3, 4, 5, 6, 7
+输出: 4, 5, 6, 7, 1, 2, 3
+
+实现方法：
+    1.前 k 个原地翻转
+    2.后 n - k 个原地翻转
+    3.整体原地翻转
+
+1, 2, 3, 4, 5, 6, 7
+
+前 k 个原地翻转：
+3, 2, 1, 4, 5, 6, 7
+
+后 n - k 个原地翻转：
+3, 2, 1, 7, 6, 5, 4
+
+整体原地翻转：
+4, 5, 6, 7, 1, 2, 3
+
+链接：https://leetcode-cn.com/problems/rotate-image/solution/ji-qiao-ti-zai-zeng-song-yi-wei-xing-shi-377z/
+"""
