@@ -24,5 +24,5 @@ class Solution(object):
             p.next = node
             p = p.next
         
-        p.next = None
+        p.next = None # 不加会报错
         return dummy.next
