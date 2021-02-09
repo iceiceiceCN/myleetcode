@@ -25,7 +25,7 @@ class Solution(object):
 
             # 如果两个节点都为空就继续循环，两者有一个为空就返回false
             if not left and not right:
-                continue
+                continue # 不能返回True，因为后面子树还需要继续比较，待全部比较完才能说明树对称
             if not left or not right:
                 return False
             if left.val != right.val:
