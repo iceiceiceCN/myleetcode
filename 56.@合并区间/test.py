@@ -1,3 +1,3 @@
-n = [[1,3],[2,0],[8,10],[15,18]]
-n.sort()
-print(n)
+nums = 10
+dp = [1 for _ in range(nums)]
+print(dp)
