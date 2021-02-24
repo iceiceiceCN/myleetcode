@@ -19,7 +19,10 @@ class Solution(object):
                     l += 1
                     r -= 1
                     # 只要没有左右指针碰撞，就继续缩小范围，跳过冗余计算
-                    while l < r and nums[l] == nums[l-1]: # 一定是和刚刚计算过的比较，而不是和下一个要计算的比较
+                    # *一定是和刚刚计算过的比较，而不是和下一个要计算的比较*；错误情况：当遇到[-2,0,1,1,2]
+                    # 当l=2,r=3时，本来[-2,1,1]也是结果，但是由于nums[2]=nums[3]，使得他们继续缩小范围
+                    # 导致l=3,r=2，越界跳出
+                    while l < r and nums[l] == nums[l-1]: 
                         l += 1
                     while l < r and nums[r] == nums[r+1]:
                         r -= 1
@@ -29,6 +32,10 @@ class Solution(object):
                     l += 1
         return res
 
+
+A = Solution()
+b = A.threeSum([-2,0,0,2,2])
+print(b)
 """
 基本思想和两数之和一样
 相当于固定一个数，然后继续两数之和
