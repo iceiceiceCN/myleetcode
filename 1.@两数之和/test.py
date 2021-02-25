@@ -1,18 +1,13 @@
 class Solution:
     def twoSum(self, nums, target):
         n = len(nums)
-        j = -1
         for i in range(n):
-            temp = nums[:i]
-            t = target - nums[i]
-            if t in temp:
-                j = temp.index(t)
-                break
-
-            return [i, j]
+            tmp = target - nums[i]
+            if tmp in nums[i+1:]:
+                return [i, nums[i+1:].index(tmp)+(i+1)]
 
 
 if __name__ == "__main__":
     A = Solution()
-    B = A.twoSum(nums=[2, 7, 11, 15], target=6)
+    B = A.twoSum(nums=[3, 2, 4], target=6)
     print(B)
