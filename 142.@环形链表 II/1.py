@@ -11,7 +11,9 @@ class Solution:
 
         # 第一次相遇
         while True:
-            if not fast or not fast.next:
+            if not fast or not fast.next: 
+            # null空节点是没有next的，使用 not fast.next会报错，所以只能通过判断 not fast 来 *判断空节点* 
+            # 然后我们通过 not fast.next 来 *判断是否有下个节点* ，如果有下个节点的话，那么执行fast.next.next就不会出错（可以指向空节点），否则会出错
                 return
             fast = fast.next.next
             slow = slow.next
