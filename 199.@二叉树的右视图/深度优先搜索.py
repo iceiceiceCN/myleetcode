@@ -13,6 +13,7 @@ class Solution(object):
 
                 # 如果不存在对应深度的节点我们才插入
                 # Python 字典 setdefault() 函数和 get()方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值。
+                # 若该key为空，使用setdefault()则保存key-value，若保存过key-value之后，使用setdefault()不改变value（只能保存，无法修改）
                 rightmost_value_at_depth.setdefault(depth, node.val)
 
                 stack.append((node.left, depth+1))
@@ -27,4 +28,6 @@ class Solution(object):
 
 算法:
 这样一来，我们可以存储在每个深度访问的第一个结点，一旦我们知道了树的层数，就可以得到最终的结果数组。
+
+https://leetcode-cn.com/problems/binary-tree-right-side-view/solution/er-cha-shu-de-you-shi-tu-by-leetcode-solution/
 """
